@@ -7,12 +7,12 @@ const getInteresadosCount = async (req, res) => {
       FROM interesados
     `);
 
-    res.json({
+    return res.json({
       ok: true,
       total: Number(result.rows[0].total)
     });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       ok: false,
       message: 'Error al contar interesados',
       error: error.message
@@ -22,6 +22,13 @@ const getInteresadosCount = async (req, res) => {
 
 const createInteresado = async (req, res) => {
   try {
+    if (!req.body) {
+      return res.status(400).json({
+        ok: false,
+        message: 'No se recibió un cuerpo JSON válido'
+      });
+    }
+
     const { nombre, correo, comentario } = req.body;
 
     if (!nombre || !correo) {
@@ -40,23 +47,26 @@ const createInteresado = async (req, res) => {
       });
     }
 
-    await pool.query(`
+    await pool.query(
+      `
       INSERT INTO interesados (nombre, correo, comentario)
       VALUES ($1, $2, $3)
-    `, [nombre.trim(), correo.trim(), comentario?.trim() || null]);
+      `,
+      [nombre.trim(), correo.trim(), comentario?.trim() || null]
+    );
 
     const countResult = await pool.query(`
       SELECT COUNT(*) AS total
       FROM interesados
     `);
 
-    res.status(201).json({
+    return res.status(201).json({
       ok: true,
       message: 'Interés registrado correctamente',
       nuevoTotal: Number(countResult.rows[0].total)
     });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       ok: false,
       message: 'Error al registrar el interés',
       error: error.message

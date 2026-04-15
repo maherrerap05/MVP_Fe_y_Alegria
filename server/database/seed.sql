@@ -12,9 +12,3 @@ VALUES
 (1, 'EST-003', 'Sofía Andrade'),
 (1, 'EST-004', 'Mateo Ruiz'),
 (1, 'EST-005', 'Valeria Torres');
-
-INSERT INTO interesados (nombre, correo, comentario)
-VALUES
-('Docente de Matemáticas', 'matematicas@feyalegria.org.ec', 'Sería útil tener historial por fecha.'),
-('Docente de Lengua', 'lengua@feyalegria.org.ec', 'La interfaz se ve clara y rápida.'),
-('Docente de Ciencias', 'ciencias@feyalegria.org.ec', 'Sería bueno agregar observaciones por estudiante.');
