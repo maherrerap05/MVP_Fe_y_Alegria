@@ -57,8 +57,8 @@ app.use('/api/demo', demoRoutes);
 app.use('/api/interesados', interesRoutes);
 app.use('/api/asistencias', asistenciaRoutes);
 
-// Ruta fallback para servir el frontend
-app.get('*', (req, res) => {
+// Fallback para frontend
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../../client/index.html'));
 });
 
