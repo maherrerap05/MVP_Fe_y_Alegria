@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 // Middlewares
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, '../../client')));
 
 // Probar conexión a PostgreSQL al iniciar
 pool.connect()
@@ -51,12 +52,17 @@ app.get('/api/db-test', async (req, res) => {
   }
 });
 
-// Rutas reales
+// Rutas API
 app.use('/api/demo', demoRoutes);
 app.use('/api/interesados', interesRoutes);
 app.use('/api/asistencias', asistenciaRoutes);
 
+// Ruta fallback para servir el frontend
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client/index.html'));
+});
+
 // Levantar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
