@@ -114,13 +114,20 @@
   <section id="demo">
     <div class="container grid-2">
       <div class="card">
-        <div class="demo-header">
-          <div>
-            <h3>Demo de registro de asistencia</h3>
-            <p id="cursoInfo">Curso: Cargando información del curso...</p>
-          </div>
-          <span class="badge">Versión demostrativa</span>
+      <div class="demo-header">
+        <div>
+          <h3>Registro de asistencia por horario</h3>
+          <p id="cursoInfo">Seleccione un horario para cargar la lista de estudiantes.</p>
         </div>
+        <span class="badge">Versión demostrativa</span>
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        <label for="horarioSelect">Horario de clase</label>
+        <select id="horarioSelect">
+          <option value="">Seleccione un horario...</option>
+        </select>
+      </div>
 
         <div class="student-list" id="studentList"></div>
 

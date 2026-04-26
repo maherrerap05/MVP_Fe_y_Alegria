@@ -7,6 +7,7 @@ const pool = require('./config/db');
 const demoRoutes = require('./routes/demoRoutes');
 const interesRoutes = require('./routes/interesRoutes');
 const asistenciaRoutes = require('./routes/asistenciaRoutes');
+const horarioRoutes = require('./routes/horarioRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -56,6 +57,7 @@ app.get('/api/db-test', async (req, res) => {
 app.use('/api/demo', demoRoutes);
 app.use('/api/interesados', interesRoutes);
 app.use('/api/asistencias', asistenciaRoutes);
+app.use('/api/horarios', horarioRoutes);
 
 // Fallback para frontend
 app.use((req, res) => {
