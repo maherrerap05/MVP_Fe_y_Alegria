@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PMV - Asistencia Docente | Fe y Alegría José María Vélaz</title>
+  <title>PMV - Sistema de Asistencia Docente | Fe y Alegría</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -13,8 +13,8 @@
       <div class="brand">
         <div class="brand-mark"></div>
         <div class="brand-text">
-          <h1><span>Colegio</span><br>José María Vélaz</h1>
-          <p>NAZARET COLEGIOS INNOVADORES</p>
+          <h1><span>Fe y Alegría</span><br>Red Educativa</h1>
+          <p>SISTEMA DE ASISTENCIA DOCENTE</p>
         </div>
       </div>
 
@@ -24,7 +24,7 @@
           <span class="social-icon twitter">t</span>
           <span class="social-icon mail">✉</span>
         </div>
-        <div>ue.josemvelaz@feyalegria.org.ec</div>
+        <div>Plataforma adaptable para instituciones educativas</div>
         <div><strong>ECUADOR</strong></div>
       </div>
     </div>
@@ -33,15 +33,16 @@
   <section class="hero" id="inicio">
     <div class="container hero-content">
       <div class="hero-copy">
-        <div class="eyebrow">Propuesta PMV institucional</div>
-        <h2>Sistema de asistencia docente con un estilo visual cercano a Fe y Alegría</h2>
+        <div class="eyebrow">Propuesta PMV para instituciones Fe y Alegría</div>
+        <h2>Sistema de asistencia docente adaptable para la red educativa Fe y Alegría</h2>
         <p>
-          Esta primera versión presenta el flujo más elemental del sistema: visualizar la lista de estudiantes,
-          marcar asistencia y registrar observaciones. Además, incorpora un contador de interés y una caja de
-          comentarios para recopilar recomendaciones de los docentes.
+          Esta versión del PMV permite validar un flujo básico de registro de asistencia por horarios,
+          pensado para ser utilizado en diferentes instituciones de Fe y Alegría. El sistema permite
+          seleccionar un horario de clase, cargar la lista correspondiente de estudiantes, registrar la
+          asistencia, generar un reporte y recoger recomendaciones de los docentes.
         </p>
         <div class="hero-buttons">
-          <button class="btn btn-primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Probar demo</button>
+          <button class="btn btn-primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Probar sistema</button>
           <button class="btn btn-secondary" onclick="document.getElementById('interes').scrollIntoView({behavior:'smooth'})">Dejar recomendación</button>
         </div>
       </div>
@@ -49,10 +50,10 @@
       <div class="hero-panel">
         <h3>¿Qué valida este PMV?</h3>
         <ul>
-          <li>Si el registro de asistencia resulta claro para el docente.</li>
+          <li>Si el registro de asistencia por horarios resulta claro para los docentes.</li>
+          <li>Si el sistema puede adaptarse a diferentes colegios de Fe y Alegría.</li>
           <li>Si el flujo propuesto ahorra tiempo dentro del aula.</li>
-          <li>Si los profesores muestran interés real en usar la herramienta.</li>
-          <li>Si las observaciones recogidas permiten mejorar la propuesta.</li>
+          <li>Si los reportes y comentarios ayudan a mejorar la solución.</li>
         </ul>
       </div>
     </div>
@@ -62,15 +63,15 @@
     <div class="container stats-grid">
       <div class="stat-card">
         <div class="number" id="contadorProfesores">0</div>
-        <div>Profesores interesados</div>
+        <div>Docentes interesados</div>
       </div>
       <div class="stat-card">
         <div class="number">1</div>
-        <div>Proceso principal simulado</div>
+        <div>Proceso principal validado</div>
       </div>
       <div class="stat-card">
         <div class="number">3</div>
-        <div>Tipos de validación: uso, interés y comentarios</div>
+        <div>Validaciones: asistencia, reportes e interés docente</div>
       </div>
     </div>
   </section>
@@ -80,32 +81,33 @@
       <div class="section-head">
         <h2>Problema que buscamos resolver</h2>
         <p>
-          En muchos contextos educativos, el registro de asistencia sigue realizándose de forma manual, lo que implica
-          pérdida de tiempo, interrupciones en la clase y poca agilidad para consultar la información. Este PMV permite
-          validar una versión sencilla de la solución, con una apariencia visual inspirada en la identidad institucional.
+          En distintas instituciones educativas, el registro de asistencia puede seguir realizándose de forma
+          manual o poco centralizada. Esto genera pérdida de tiempo, dificultad para consultar información y
+          poca trazabilidad por horarios. Este PMV propone una solución sencilla, adaptable a varios colegios
+          de Fe y Alegría, que permite registrar asistencia por clase y recopilar retroalimentación docente.
         </p>
       </div>
 
       <div class="process-steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Ingresar a la lista</h3>
-          <p>El docente visualiza el curso y la nómina básica de estudiantes.</p>
+          <h3>Seleccionar horario</h3>
+          <p>El docente elige el horario de clase correspondiente.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Marcar asistencia</h3>
-          <p>Selecciona rápidamente quién asistió y quién no asistió.</p>
+          <h3>Cargar estudiantes</h3>
+          <p>El sistema muestra la lista asociada a ese horario.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Guardar registro</h3>
-          <p>El sistema resume el resultado con un solo clic.</p>
+          <h3>Registrar asistencia</h3>
+          <p>El docente marca quién asistió, quién faltó y quién queda sin marcar.</p>
         </div>
         <div class="step">
           <div class="step-number">4</div>
-          <h3>Enviar recomendaciones</h3>
-          <p>El profesor deja sugerencias y aporta a la mejora de la propuesta.</p>
+          <h3>Generar reporte</h3>
+          <p>El sistema permite descargar un PDF sencillo del registro realizado.</p>
         </div>
       </div>
     </div>
@@ -114,32 +116,32 @@
   <section id="demo">
     <div class="container grid-2">
       <div class="card">
-      <div class="demo-header">
-        <div>
-          <h3>Registro de asistencia por horario</h3>
-          <p id="cursoInfo">Seleccione un horario para cargar la lista de estudiantes.</p>
+        <div class="demo-header">
+          <div>
+            <h3>Registro de asistencia por horario</h3>
+            <p id="cursoInfo">Seleccione un horario para cargar la lista de estudiantes.</p>
+          </div>
+          <span class="badge">PMV funcional</span>
         </div>
-        <span class="badge">Versión demostrativa</span>
-      </div>
 
-      <div style="margin-bottom: 18px;">
-        <label for="horarioSelect">Horario de clase</label>
-        <select id="horarioSelect">
-          <option value="">Seleccione un horario...</option>
-        </select>
-      </div>
+        <div style="margin-bottom: 18px;">
+          <label for="horarioSelect">Horario de clase</label>
+          <select id="horarioSelect">
+            <option value="">Seleccione un horario...</option>
+          </select>
+        </div>
 
         <div class="student-list" id="studentList"></div>
 
         <div class="demo-footer">
           <div class="summary-box" id="resumenAsistencia">
-            Aún no se ha guardado la asistencia del curso.
+            Aún no se ha guardado la asistencia del horario seleccionado.
           </div>
           <button class="btn btn-primary" onclick="guardarAsistencia()">Guardar asistencia</button>
         </div>
 
         <div class="success-message" id="demoSuccess">
-          Asistencia registrada correctamente. El flujo principal fue completado con éxito.
+          Asistencia registrada correctamente. Ya puede generar el reporte correspondiente.
         </div>
       </div>
 
@@ -147,7 +149,7 @@
         <div class="demo-header" style="margin-bottom: 10px;">
           <div>
             <h3>Interés docente y recomendaciones</h3>
-            <p>Comparte tu opinión sobre esta propuesta de sistema.</p>
+            <p>Comparte tu opinión para mejorar esta propuesta en la red Fe y Alegría.</p>
           </div>
         </div>
 
@@ -164,18 +166,18 @@
 
           <div>
             <label for="comentarios">Comentarios y recomendaciones del sistema</label>
-            <textarea id="comentarios" placeholder="¿Qué mejorarías del sistema? ¿Qué funciones adicionales considerarías importantes?"></textarea>
+            <textarea id="comentarios" placeholder="¿Qué mejorarías del sistema? ¿Qué funciones adicionales serían útiles para tu institución?"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary">Registrar interés</button>
         </form>
 
         <div class="success-message" id="formSuccess">
-          Gracias por tu aporte. Tu interés y recomendaciones fueron registradas.
+          Gracias por tu aporte. Tu interés y recomendaciones fueron registrados.
         </div>
 
         <div class="interest-box">
-          Profesores que ya mostraron interés
+          Docentes que ya mostraron interés
           <strong id="contadorDestacado">0</strong>
         </div>
       </div>
@@ -184,9 +186,10 @@
 
   <footer>
     <div class="container">
-      Primera versión del PMV de asistencia docente inspirada en el estilo visual de la Unidad Educativa Fe y Alegría José María Vélaz.
+      PMV de asistencia docente adaptable para instituciones de la Red Educativa Fe y Alegría.
     </div>
   </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>
